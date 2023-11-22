@@ -36,6 +36,6 @@ jobs:
         with:
           charts_dir: charts        
         env:
-          #CR_TOKEN: "${{ steps.generate-token.outputs.token }}"
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_TOKEN: "${{ steps.generate-token.outputs.token }}"
+          #CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_SKIP_EXISTING: true
