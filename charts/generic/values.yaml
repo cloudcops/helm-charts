@@ -13,7 +13,7 @@ image:
 
 imagePullSecrets: []
 # imagePullSecrets:
-#   - name: hub-argos-jenkins
+#   - name: my-secret
 nameOverride: ""
 fullnameOverride: ""
 

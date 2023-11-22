@@ -8,6 +8,8 @@ on:
 jobs:
   release-to-github:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@main
