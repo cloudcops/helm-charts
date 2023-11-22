@@ -32,9 +32,7 @@ jobs:
         uses: azure/setup-helm@v3
 
       - name: Run github chart-releaser
-        uses: helm/chart-releaser-action@v1.4.1
-        with:
-          charts_dir: charts        
+        uses: helm/chart-releaser-action@v1.6.0
         env:
           #CR_TOKEN: "${{ steps.generate-token.outputs.token }}"
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
