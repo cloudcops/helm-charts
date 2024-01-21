@@ -23,8 +23,7 @@ jobs:
 
       - name: Set up Helm
         run: |
-          export HARBOR_PATH=${GITHUB_REPOSITORY#cloudcops/}
-          helm registry login --username ${{ secrets.HARBOR_PUBLISH_USER }} --password ${{ secrets.HARBOR_PUBLISH_PASSWORD }} ${{ env.HARBOR_URL }}
+          helm registry login --username ${{ secrets.HARBOR_PUBLISH_USER }} --password ${{ secrets.HARBOR_PUBLISH_PASSWORD }} https://${{ env.HARBOR_URL }}
 
       - name: Package and Push Helm Chart
         run: |
