@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main
-
+    paths:
+      - 'charts/**/*'
+      
 jobs:
   package-and-publish:
     runs-on: ubuntu-latest
