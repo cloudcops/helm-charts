@@ -28,4 +28,4 @@ jobs:
       - name: Package and Push Helm Chart
         run: |
           helm package ./charts/${{ matrix.chart }}
-          helm push ${{ matrix.chart }}*.tgz oci://hub.cloudcops.de/cloudcops/helm/${{ github.repository }}
+          helm push ${{ matrix.chart }}*.tgz oci://hub.cloudcops.de/helm
