@@ -75,13 +75,16 @@ service:
 
 ## currently, only one ingress with one specific host is supported
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
-  host: chart-example.local
-  path: /
+  hosts:
+    - name: host1.example.com
+      path: /
+    - name: host2.example.com
+      path: /app
   tlsEnabled: false
-  ## set to true, if the ingress default certificate should be used
   useDefaultCertificate: false
+
 ## You can also reference to a specific secret with a TLS certificate
 #  secretName: my-own-tls-secret
 
