@@ -23,9 +23,9 @@ jobs:
 
       - name: Set up Helm
         run: |
-          helm registry login --username ${{ secrets.HARBOR_PUBLISH_USER }} --password ${{ secrets.HARBOR_PUBLISH_PASSWORD }} https://${{ env.HARBOR_URL }}
+          helm registry login --username ${{ secrets.HARBOR_PUBLISH_USER }} --password ${{ secrets.HARBOR_PUBLISH_PASSWORD }} https://hub.cloudcops.de
 
       - name: Package and Push Helm Chart
         run: |
           helm package ./charts/${{ matrix.chart }}
-          helm push ${{ matrix.chart }}*.tgz oci://${{ env.HARBOR_URL }}/cloudcops/helm/${{ github.repository }}
+          helm push ${{ matrix.chart }}*.tgz oci://hub.cloudcops.de/cloudcops/helm/${{ github.repository }}
