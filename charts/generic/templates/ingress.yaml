@@ -33,7 +33,7 @@ spec:
       http:
         paths:
           - path: {{ .path | default "/" | quote }}
-            pathType: {{ .Values.ingress.pathType | default "Prefix" | quote }}
+            pathType: {{ .pathType }}
             backend:
               service:
                 name: {{ $resourceName }}

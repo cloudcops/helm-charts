@@ -80,8 +80,10 @@ ingress:
   hosts:
     - name: host1.example.com
       path: /
+      pathType: Prefix
     - name: host2.example.com
       path: /app
+      pathType: Prefix
   tlsEnabled: false
   useDefaultCertificate: false
 
